@@ -41,3 +41,5 @@ Route::post('/children/{id}/update',[ChildrenController::class,'update']);
 
 //Delete дарсныг нь авна
 Route::get('/children/{id}/delete',[ChildrenController::class,'delete']);
+
+Route::get('/children/{id}/profile',[ChildrenController::class,'profile']);

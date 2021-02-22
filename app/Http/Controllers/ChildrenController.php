@@ -63,6 +63,10 @@ class ChildrenController extends Controller
         $dataChild->delete($dataChild);
         return redirect('/children')->with('success','Амжилттай устгагдлаа!!!');
     }
+    function profile($id){
+        $data = Children::find($id);
+        return view('children.profile',['child' => $data]);
+    }
 
     
 }

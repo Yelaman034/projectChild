@@ -1,60 +1,53 @@
-
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-  <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
-  <!-- Favicon -->
-  <link rel="icon" href="{{asset('parents2/assets/img/brand/favicon.png')}}" type="image/png">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <!-- Icons -->
-  <link rel="stylesheet" href="{{asset('parents2/assets/vendor/nucleo/css/nucleo.css')}}" type="text/css">
-  <link rel="stylesheet" href="{{asset('parents2/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" type="text/css">
-  <!-- Page plugins -->
-  <!-- Argon CSS -->
-  <link rel="stylesheet" href="{{asset('parents2/assets/css/argon.css?v=1.2.0')}}" type="text/css">
+	<title>Dashboard | Klorofil - Free Bootstrap Dashboard Template</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="{{asset('parents/assets/vendor/bootstrap/css/bootstrap.min.css')}}"> 
+	<link rel="stylesheet" href="{{asset('parents/assets/vendor/font-awesome/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" href="{{asset('parents/assets/vendor/linearicons/style.css')}}">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="{{asset('parents/assets/css/main.css')}}">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="{{asset('parents/assets/css/demo.css')}}">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('parents/assets/img/apple-icon.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('parents/assets/img/favicon.png')}}">
 </head>
 
 <body>
-  <!-- Sidenav -->
-  {{View::make('layouts.sideNav')}}
-
-  <!-- Main content -->
-  <div class="main-content" id="panel">
-    <!-- Topnav -->
-    {{View::make('layouts.topNav')}}
-
-    <!-- Header -->
-
-    <!-- Header -->
-    <div class="header bg-white pb-6">
-      <div class="container-fluid">
-        <div class="header-body">
-		      @yield('content')
-          <!-- Card stats -->
-        </div>
-      </div>
-    </div>
-    <!-- Page content -->
-    
-  </div>
-  <!-- Argon Scripts -->
-  <!-- Core -->
-  <script src="{{asset('parents2/assets/vendor/jquery/dist/jquery.min.js')}}"></script>
-  <script src="{{asset('parents2/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('parents2/assets/vendor/js-cookie/js.cookie.js')}}"></script>
-  <script src="{{asset('parents2/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
-  <script src="{{asset('parents2/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
-  <!-- Optional JS -->
-  <script src="{{asset('parents2/assets/vendor/chart.js/dist/Chart.min.js')}}"></script>
-  <script src="{{asset('parents2/assets/vendor/chart.js/dist/Chart.extension.js')}}"></script>
-  <!-- Argon JS -->
-  <script src="{{asset('parents2/assets/js/argon.js?v=1.2.0')}}"></script>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		{{View::make('layouts.topNav')}}
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		{{View::make('layouts.sideNav')}}
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+        
+            @yield('content')
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; 2017 <a href="https://www.themeineed.com" target="_blank">Theme I Need</a>. All Rights Reserved.</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="{{asset('parents/assets/vendor/jquery/jquery.min.js')}}"></script>
+	<script src="{{asset('parents/assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('parents/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+	<script src="{{asset('parents/assets/scripts/klorofil-common.js')}}"></script>
+	
 </body>
 
 </html>
