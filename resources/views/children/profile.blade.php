@@ -12,7 +12,7 @@
 								<div class="profile-header">
 									<div class="overlay"></div>
 									<div class="profile-main">
-										<img src="assets/img/user-medium.png" class="img-circle" alt="Avatar">
+										<img src="{{asset('parents/assets/img/user1.png')}}" class="img-circle" alt="Avatar">
 										<h3 class="name">{{$child->ovog}} овогтой {{$child->ner}}</h3>
 										<span class="online-status status-available">Available</span>
 									</div>
@@ -41,7 +41,7 @@
 											<li>Хүйс <span>{{$child->hvis}}</span></li>
 										</ul>
 									</div>
-									<div class="text-center"><a href="/children/{{$child->id}}/edit" class="btn btn-primary">Edit Profile</a></div>
+									<div class="text-center"><a href="/children/{{$child->id}}/edit" class="btn btn-warning">Edit Profile</a></div>
 								</div>
 								<!-- END PROFILE DETAIL -->
 							</div>

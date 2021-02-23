@@ -1,4 +1,52 @@
 @extends('layouts.master')
+@section('content')
+<div class="main">
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Edit</h3>
+								</div>
+                
+                <form action="/children/{{$child->id}}/update" method="post">
+								<div class="panel-body">
+            <div class="form-group">
+              <label for="studentLName">Овог</label>
+              <input type="text" class="form-control" id="LName" name="ovog" placeholder="Жишээ: Лхагвасүрэн" value="{{$child->ovog}}">
+            </div>
+            <div class="form-group">
+              <label for="studentFName">Нэр</label>
+              <input type="text" class="form-control" id="FName" name="ner" placeholder="Жишээ: Батбаяр" value="{{$child->ner}}">
+            </div>
+            <div class="form-group">
+            <label for="birthday">Төрсөн өдөр</label>
+            <input type="date" class="form-control" id="birthday" name="date_of_birth" value="{{$child->date_of_birth}}">
+            </div>
+            <div class="form-group">
+              <label for="studentId">Регистер дугаар</label>
+              <input type="text" class="form-control" id="rId" name="r_number" placeholder="Регистер дугаар" value="{{$child->r_number}}">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="studentGender">Хүйс</label>
+              <select class="form-control" id="Gender" name="hvis">
+                <option>-- Сонгох --</option>
+                <option value="male"   @if($child->hvis == "male") selected @endif>Эр</option>
+                <option value="female" @if($child->hvis == "female") selected @endif>Эм</option>
+
+              </select>
+            </div>
+              <button type="submit" name="submit" class="btn btn-success">Update</button>
+                </form>
+							</div>
+                </div>
+            </div> 
+        </div>   
+    </div> 
+</div>
+@stop
 @section("content")
     <h1>Хүүхдийн мэдээлэлийн засах</h1>
         <!-- Alert -->

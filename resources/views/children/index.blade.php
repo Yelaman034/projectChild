@@ -8,9 +8,9 @@
                 <div class="panel">
 								<div class="panel-heading">
 									<h3 class="panel-title">Хүүхдийн жагсаалт</h3>
-                   <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModal">
-                    Хүүхэд нэмэх
-                    </button>
+                  <div class="right">
+                    <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><i class="lnr lnr-plus-circle"></i>Хүүхэд нэмэх </button>
+                  </div> 
 								</div>
 								<div class="panel-body">
 									<table class="table">
@@ -55,14 +55,10 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title" id="exampleModalLabel">Хүүхэд нэмэх</h5>
+        
       </div>
-      <div class="modal-body">
         <!-- FORM -->
-        <div class="container">
       <form action="/children/create" method="post">
       @csrf
         <div class="panel panel-default">
@@ -104,14 +100,10 @@
           
         </div>
       
-    </div>
         <!-- FORM -->
-      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <div class="panel-footer" style="background-color: white;">
               <button type="submit" name="submit" class="btn btn-success">НЭМЭХ</button>
-          </div>
           </form>
       </div>
     </div>
